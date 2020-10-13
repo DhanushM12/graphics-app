@@ -5,8 +5,7 @@ import Properties from "./Properties";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Design a rectangle</h1>
+    <div className="app">
       <Pallete />
       <Canvas />
       <Properties />
