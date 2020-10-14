@@ -80,3 +80,16 @@ aside {
 .buttons button:hover {
   background: darkgray;
 }
+.key {
+  color: lightslategray;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+  height: 25px;
+}
+
+.value {
+  color: darkslategray;
+  font-weight: bolder;
+}
