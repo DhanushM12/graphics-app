@@ -1,3 +1,36 @@
+## Project Folder Structure
+
+```
+graphics-app
+├─ .git
+├─ .gitignore
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ README.md
+└─ src
+   ├─ actions.js
+   ├─ components
+   │  ├─ App.js
+   │  ├─ Canvas.js
+   │  ├─ Pallete.js
+   │  ├─ Properties.js
+   │  ├─ Rectangle.js
+   │  └─ Shape.js
+   ├─ index.css
+   ├─ index.js
+   └─ store.js
+
+```
+
+## React JS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
