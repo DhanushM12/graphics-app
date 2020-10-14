@@ -1,6 +1,12 @@
 import React, { useRef, useCallback } from "react";
 import { Layer, Stage } from "react-konva"; //drawing complex canvas graphics using React
-import { useShapes, createRectangle, clearSelection } from "../store";
+import {
+  useShapes,
+  createRectangle,
+  clearSelection,
+  saveDiagram,
+  reset,
+} from "../store";
 import { DRAG_DATA_KEY, SHAPE_TYPES } from "../actions";
 import { Shape } from "./Shape";
 
@@ -36,8 +42,8 @@ function Canvas() {
   return (
     <main className="canvas" onDrop={handleDrop} onDragOver={handleDragOver}>
       <div className="buttons">
-        <button>Save</button>
-        <button>Reset</button>
+        <button onClick={saveDiagram}>Save</button>
+        <button onClick={reset}>Reset</button>
       </div>
       <Stage
         ref={stageRef}
