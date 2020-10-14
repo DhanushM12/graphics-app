@@ -1,6 +1,6 @@
 import React, { useRef, useCallback } from "react";
 import { Layer, Stage } from "react-konva"; //drawing complex canvas graphics using React
-import { useShapes, createRectangle } from "../store";
+import { useShapes, createRectangle, clearSelection } from "../store";
 import { DRAG_DATA_KEY, SHAPE_TYPES } from "../actions";
 import { Shape } from "./Shape";
 
@@ -43,6 +43,7 @@ function Canvas() {
         ref={stageRef}
         width={window.innerWidth - 400}
         height={window.innerHeight}
+        onClick={clearSelection}
       >
         <Layer>
           {shapes.map(([key, shape]) => (

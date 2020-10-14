@@ -86,3 +86,12 @@ export const transformRectangleShape = (node, id, event) => {
     }
   });
 };
+export const updateAttribute = (attr, value) => {
+  setState((state) => {
+    const shape = state.shapes[state.selected];
+
+    if (shape) {
+      shape[attr] = value;
+    }
+  });
+};
