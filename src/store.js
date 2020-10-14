@@ -4,13 +4,31 @@ import { nanoid } from "nanoid"; //tiny, secure, URL-friendly, unique string ID 
 import clamp from "clamp"; //a value between two other values
 import { SHAPE_TYPES, DEFAULTS, LIMITS } from "./actions";
 
+const APP_NAMESPACE = "__graphics_diagrams__";
+
 const baseState = {
   selected: null,
   shapes: {},
 };
 
-export const useShapes = createStore(baseState);
+export const useShapes = createStore(() => {
+  const initialState = JSON.parse(localStorage.getItem(APP_NAMESPACE));
+
+  return { ...baseState, shapes: initialState ?? {} };
+});
 const setState = (fn) => useShapes.set(produce(fn));
+
+export const saveDiagram = () => {
+  const state = useShapes.get();
+
+  localStorage.setItem(APP_NAMESPACE, JSON.stringify(state.shapes));
+};
+
+export const reset = () => {
+  localStorage.removeItem(APP_NAMESPACE);
+
+  useShapes.set(baseState);
+};
 
 export const createRectangle = ({ x, y }) => {
   setState((state) => {
