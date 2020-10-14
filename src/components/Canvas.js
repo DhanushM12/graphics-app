@@ -1,5 +1,7 @@
 import React from "react";
 import { Layer, Stage } from "react-konva"; //drawing complex canvas graphics using React
+import { useShapes, createRectangle } from "../store";
+import { DRAG_DATA_KEY, SHAPE_TYPES } from "../actions";
 
 function Canvas() {
   return (
