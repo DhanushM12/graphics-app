@@ -37,3 +37,23 @@ aside {
   width: 150px;
   border: solid 2px black;
 }
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.properties {
+  margin-top: 10px;
+}
+.no-data {
+  color: darkslategray;
+}
+
+.canvas {
+  width: calc(100% - 200px);
+  border: solid 1px lightgray;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+}

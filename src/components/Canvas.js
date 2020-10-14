@@ -1,5 +1,5 @@
 import React from "react";
-import { Layer, Stage } from "react-konva";
+import { Layer, Stage } from "react-konva"; //drawing complex canvas graphics using React
 
 function Canvas() {
   return (
